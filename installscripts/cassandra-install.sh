@@ -17,7 +17,6 @@ then
 fi
 
 CASS=~/opt/cassandra
-CASS_YML=CASS/conf/cassandra.yml
 
 
 mkdir -p ~/opt/packages && cd $_ && \
@@ -30,7 +29,6 @@ mkdir -p $CASS/data/saved_caches && \
 mkdir -p $CASS/logs && \
 brew install gnu-sed && \
 alias sed=gsed && \
-gsed -i -e '/^export PATH=/ s/$/:\~\/opt\/cassandra\/bin/' -e "$ a export CASSANDRA_HOME=$CASS" ~/.bash_profile && \
-source ~/.bash_profile
+gsed -i -e '/^export PATH=/ s/$/:\~\/opt\/cassandra\/bin/' -e "$ a export CASSANDRA_HOME=$CASS" ~/.bash_profile
 
-
+echo ------CASSANDRA $VERSION installed successfully.---------- 
