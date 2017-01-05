@@ -1,10 +1,9 @@
 #!/bin/bash
 
-read -p 'Please enter your ADS Id: ' username
-read -sp 'Please enter your ADS password: ' password
+read -p 'Please enter your proxy endpoint: ' proxy
 
-export http_proxy=http://$username:$password@proxy-phoenix.aexp.com:8080
-export https_proxy=http://$username:$password@proxy-phoenix.aexp.com:8080
+export http_proxy=$proxy
+export https_proxy=$proxy
 echo .
 echo .
 echo .
